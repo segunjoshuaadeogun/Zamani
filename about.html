@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About | ZAMANI</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   SLIDESHOW BACKGROUND
+========================= */
+
+.slideshow{
+    position:fixed;
+    width:100%;
+    height:100%;
+    inset:0;
+    z-index:-3;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+    background-position:center;
+
+    opacity:0;
+    transform:scale(1);
+
+    animation:slideShow 20s infinite;
+}
+
+.slide:nth-child(1){
+    background-image:url('https://images.unsplash.com/photo-1520975916090-3105956dac38');
+    animation-delay:0s;
+}
+
+.slide:nth-child(2){
+    background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c');
+    animation-delay:5s;
+}
+
+.slide:nth-child(3){
+    background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f');
+    animation-delay:10s;
+}
+
+.slide:nth-child(4){
+    background-image:url('https://images.unsplash.com/photo-1523381294911-8d3cead13475');
+    animation-delay:15s;
+}
+
+@keyframes slideShow{
+
+    0%{
+        opacity:0;
+        transform:scale(1);
+    }
+
+    5%{
+        opacity:1;
+    }
+
+    25%{
+        opacity:1;
+        transform:scale(1.08);
+    }
+
+    30%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.82)
+    );
+
+    z-index:-2;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:22px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:6px;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:1px;
+    left:0;
+    bottom:-7px;
+    background:white;
+    transition:0.4s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    opacity:0.8;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:140px 8% 100px;
+}
+
+.about-content{
+    max-width:900px;
+    text-align:center;
+
+    animation:fadeUp 1.4s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* SUBTITLE */
+
+.subtitle{
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:18px;
+    opacity:0.8;
+}
+
+/* TITLE */
+
+.about h1{
+    font-size:68px;
+    font-weight:800;
+    margin-bottom:35px;
+    line-height:1;
+}
+
+/* TEXT */
+
+.about p{
+    font-size:17px;
+    line-height:2;
+    margin-bottom:25px;
+    opacity:0.9;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+    font-size:19px;
+    font-weight:600;
+    opacity:1;
+}
+
+/* BRAND BOX */
+
+.brand-box{
+    margin-top:45px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:rgba(255,255,255,0.03);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:20px;
+}
+
+.brand-box h3{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.brand-box p{
+    font-size:15px;
+    opacity:0.8;
+    margin-bottom:0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+
+    padding:60px 7% 30px;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.footer-left h2{
+    letter-spacing:5px;
+    margin-bottom:10px;
+}
+
+.footer-left p{
+    opacity:0.6;
+    font-size:14px;
+}
+
+/* SOCIALS */
+
+.socials{
+    display:flex;
+    gap:18px;
+}
+
+.socials a{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    text-decoration:none;
+    color:white;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    transition:0.4s;
+}
+
+.socials a:hover{
+    transform:translateY(-5px);
+    background:white;
+    color:black;
+}
+
+/* COPYRIGHT */
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    opacity:0.5;
+    font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .about h1{
+        font-size:52px;
+    }
+
+    nav{
+        gap:18px;
+    }
+}
+
+@media(max-width:650px){
+
+    header{
+        padding:18px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .about{
+        padding:140px 7% 90px;
+    }
+
+    .about h1{
+        font-size:42px;
+    }
+
+    .about p{
+        font-size:15px;
+        line-height:1.9;
+    }
+
+    .highlight{
+        font-size:17px;
+    }
+
+    .brand-box{
+        padding:25px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SLIDESHOW -->
+
+<div class="slideshow">
+
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+
+</div>
+
+<!-- OVERLAY -->
+
+<div class="overlay"></div>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">ZAMANI</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+    <div class="about-content">
+
+        <p class="subtitle">
+            OUR STORY
+        </p>
+
+        <h1>
+            BUILT FOR<br>
+            THE BOLD
+        </h1>
+
+        <p>
+            ZAMANI is where African heritage collides with modern rebellion.
+            A brand created for people who refuse to blend in, follow trends,
+            or shrink themselves to fit expectations.
+        </p>
+
+        <p>
+            Every piece represents identity, confidence, movement, and presence.
+            We create fashion for individuals who understand that style is more
+            than clothing — it is energy, attitude, and self-expression.
+        </p>
+
+        <p>
+            Inspired by culture and driven by the future, ZAMANI exists for
+            creators, leaders, outsiders, athletes, visionaries, and the next
+            generation shaping their own lane.
+        </p>
+
+        <p class="highlight">
+            WE DON'T FOLLOW CULTURE.<br>
+            WE CREATE IT.
+        </p>
+
+        <!-- BRAND BOX -->
+
+        <div class="brand-box">
+
+            <h3>
+                More Than Fashion
+            </h3>
+
+            <p>
+                ZAMANI is a movement built around originality, fearless
+                creativity, and timeless streetwear designed to leave an
+                unforgettable presence everywhere you go.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+
+            <h2>ZAMANI</h2>
+
+            <p>
+                Made for leaders. Built for legacy.
+            </p>
+
+        </div>
+
+        <!-- SOCIALS -->
+
+        <div class="socials">
+
+            <!-- REPLACE # WITH REAL LINKS -->
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 ZAMANI. ALL RIGHTS RESERVED.
+    </div>
+
+</footer>
+
+</body>
+</html>

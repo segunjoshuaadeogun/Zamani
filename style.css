@@ -1,0 +1,182 @@
+/* =========================
+   BETTER RESPONSIVE DESIGN
+========================= */
+
+/* LARGE TABLETS */
+
+@media(max-width:1024px){
+
+    .hero-content h1,
+    .about h1,
+    .shop-hero h1{
+        font-size:55px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    header{
+        padding:20px 5%;
+    }
+}
+
+/* TABLETS */
+
+@media(max-width:768px){
+
+    header{
+        padding:18px 5%;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:13px;
+    }
+
+    .hero-content h1,
+    .about h1,
+    .shop-hero h1{
+        font-size:42px;
+        line-height:1.1;
+    }
+
+    .hero-content h2{
+        font-size:15px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:220px;
+        text-align:center;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+        gap:20px;
+    }
+
+    .image-box img{
+        height:300px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+/* PHONES */
+
+@media(max-width:600px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    header{
+        padding:16px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .logo{
+        font-size:22px;
+        letter-spacing:4px;
+    }
+
+    .hero,
+    .about{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .hero-content h1,
+    .about h1,
+    .shop-hero h1{
+        font-size:34px;
+    }
+
+    .hero-content h2,
+    .about p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .subtitle,
+    .shop-hero p{
+        letter-spacing:3px;
+        font-size:11px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .image-box img{
+        height:360px;
+    }
+
+    .info{
+        padding:20px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .feature{
+        padding:25px;
+    }
+
+    footer{
+        padding:50px 5% 25px;
+    }
+
+    .socials{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+}
+
+/* EXTRA SMALL DEVICES */
+
+@media(max-width:380px){
+
+    .hero-content h1,
+    .about h1,
+    .shop-hero h1{
+        font-size:28px;
+    }
+
+    .hero-content h2{
+        font-size:13px;
+    }
+
+    .btn{
+        padding:13px 18px;
+        font-size:12px;
+    }
+
+    .image-box img{
+        height:320px;
+    }
+}

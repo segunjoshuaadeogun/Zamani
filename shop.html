@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - Zamani</title>
+
+<style>
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+/* SHOP SECTION */
+.shop {
+    padding: 60px 40px;
+}
+
+.shop h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* INFO */
+.info {
+    padding: 15px;
+}
+
+.info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ZAMANI</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+<section class="shop">
+
+<h2>SHOP</h2>
+
+<div class="products">
+
+    <!-- 10 PRODUCTS -->
+
+    <div class="card">
+        <img src="RELEASED/LOVE IS CANCER.jpeg">
+        <div class="info">
+            <h3>LOVE IS CANCER</h3>
+            <p>₦20,000<object data="" type=""></object></p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/MEN STILL SIMP.jpeg">
+        <div class="info">
+            <h3>MEN STILL SIMP</h3>
+            <p>₦20,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/OLD ZEE.jpeg">
+        <div class="info">
+            <h3>OLD ZAMANI</h3>
+            <p>₦20,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/Z2025.jpeg">
+        <div class="info">
+            <h3>ZAMANI NEW WORLD</h3>
+            <p>₦20,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/FEMALE2.jpeg">
+        <div class="info">
+            <h3>FUCK THE RULEZ</h3>
+            <p>₦18,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/PRIMAL.jpeg">
+        <div class="info">
+            <h3>PRIMAL</h3>
+            <p>₦18,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/MONARCH.jpeg">
+        <div class="info">
+            <h3>MONARCH</h3>
+            <p>₦25,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/ChatGPT Image Apr 24, 2026, 04_03_12 PM.png">
+        <div class="info">
+            <h3>ATHLETIC FREAK </h3>
+            <p>₦20,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/POLO1.jpeg">
+        <div class="info">
+            <h3>HERITAGE</h3>
+            <p>₦25,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="RELEASED/FEMALE.jpeg">
+        <div class="info">
+            <h3>ZAMANI</h3>
+            <p>₦18,000</p>
+            <a href="#" class="btn">View</a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    <p>© 2026 Zamani Brand</p>
+</footer>
+
+</body>
+</html>

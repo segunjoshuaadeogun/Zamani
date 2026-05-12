@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZAMANI | Premium Streetwear</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:6px;
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0%;
+    height:1px;
+    background:white;
+    transition:0.4s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover{
+    opacity:0.8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* DARK OVERLAY */
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0.65)
+    );
+    z-index:1;
+}
+
+/* =========================
+   SLIDESHOW
+========================= */
+
+.slides{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+
+    opacity:0;
+    transform:scale(1);
+
+    animation:slideShow 20s infinite;
+}
+
+.slide:nth-child(1){
+    animation-delay:0s;
+}
+
+.slide:nth-child(2){
+    animation-delay:5s;
+}
+
+.slide:nth-child(3){
+    animation-delay:10s;
+}
+
+.slide:nth-child(4){
+    animation-delay:15s;
+}
+
+@keyframes slideShow{
+
+    0%{
+        opacity:0;
+        transform:scale(1);
+    }
+
+    5%{
+        opacity:1;
+    }
+
+    25%{
+        opacity:1;
+        transform:scale(1.08);
+    }
+
+    30%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+
+    animation:fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content p{
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:20px;
+    opacity:0.9;
+}
+
+.hero-content h1{
+    font-size:75px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero-content h2{
+    font-size:18px;
+    font-weight:400;
+    margin-bottom:35px;
+    opacity:0.9;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:15px 38px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:white;
+    color:black;
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
+    background:#d9d9d9;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,0.4);
+    color:white;
+    background:transparent;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.features{
+    width:100%;
+    background:#0f0f0f;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    padding:30px 7%;
+    gap:20px;
+}
+
+.feature{
+    text-align:center;
+}
+
+.feature i{
+    font-size:25px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.feature p{
+    font-size:13px;
+    opacity:0.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#050505;
+    padding:50px 7%;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.footer-left h2{
+    letter-spacing:5px;
+    margin-bottom:10px;
+}
+
+.footer-left p{
+    opacity:0.6;
+    font-size:14px;
+}
+
+/* SOCIALS */
+
+.socials{
+    display:flex;
+    gap:18px;
+}
+
+.socials a{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.15);
+
+    text-decoration:none;
+    color:white;
+
+    transition:0.4s;
+}
+
+.socials a:hover{
+    transform:translateY(-5px);
+    background:white;
+    color:black;
+}
+
+/* COPYRIGHT */
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    opacity:0.5;
+    font-size:13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .hero-content h1{
+        font-size:50px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:18px;
+    }
+}
+
+@media(max-width:650px){
+
+    header{
+        padding:18px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .hero-content h2{
+        font-size:15px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">ZAMANI</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <!-- SLIDES -->
+
+    <div class="slides">
+
+        <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1520975916090-3105956dac38');">
+        </div>
+
+        <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c');">
+        </div>
+
+        <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f');">
+        </div>
+
+        <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1523381294911-8d3cead13475');">
+        </div>
+
+    </div>
+
+    <!-- CONTENT -->
+
+    <div class="hero-content">
+
+        <p>NEW GENERATION STREETWEAR</p>
+
+        <h1>ZAMANI</h1>
+
+        <h2>
+            Premium Polos, Tees & Timeless Fashion
+        </h2>
+
+        <div class="hero-buttons">
+
+            <a href="shop.html" class="btn btn-primary">
+                SHOP NOW
+            </a>
+
+            <a href="about.html" class="btn btn-secondary">
+                OUR STORY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature">
+        <i class="fa-solid fa-shirt"></i>
+        <h3>Premium Quality</h3>
+        <p>Luxury materials crafted for comfort & style.</p>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-truck-fast"></i>
+        <h3>Fast Delivery</h3>
+        <p>Nationwide delivery with smooth order processing.</p>
+    </div>
+
+    <div class="feature">
+        <i class="fa-solid fa-fire"></i>
+        <h3>Unique Designs</h3>
+        <p>Made for people who lead, not follow.</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-left">
+            <h2>ZAMANI</h2>
+            <p>Built for the bold.</p>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="socials">
+
+            <!-- REPLACE # WITH YOUR REAL LINKS -->
+
+            <a href="https://www.instagram.com/zamani.nwo?igsh=MTRpamd2eHQ5NmR5bQ%3D%3D&utm_source=q">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@zamanii4_/photo/7632450909011709202?_r=1&u_code=f2c83ff38ek1ic&preview_pb=0&sharer_language=en&_d=emikae8mbiml10&share_item_id=7632450909011709202&source=h5_m&timestamp=1777070457&item_author_type=1&utm_source=copy&tt_from=copy&enable_checksum=1&utm_medium=ios&share_link_id=8D6EBBAC-77AA-4722-A137-36F762F632C6&user_id=7616146436790633492&sec_user_id=MS4wLjABAAAATLyW5yasyKJtnuPgYa0YgZdXpJwa6aIb4TKlQs3ojD87v3_aKC4OgktL_dXGGbE_&utm_campaign=client_share&ug_btm=b8727,b2878&social_share_type=14&link_reflow_popup_iteration_sharer=%7B%22click_empty_to_play%22:1,%22follow_to_play_duration%22:-1,%22dynamic_cover%22:1,%22profile_clickable%22:1%7D&ug_photo_idx=0&share_app_id=1233">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://snapchat.com/t/gvPiHu6a">
+                <i class="fab fa-snapchat-ghost"></i>
+            </a>
+
+            <a href="https://wa.me/qr/3WBO5CE3PMADL1">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 ZAMANI. ALL RIGHTS RESERVED.
+    </div>
+
+</footer>
+
+</body>
+</html>
